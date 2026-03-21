@@ -1,0 +1,33 @@
+title Modern Farm
+
+participant plan.js
+participant main.js
+participant soybean.js
+participant corn.js
+participant sunflower.js
+participant asparagus.js
+participant wheat.js
+participant potato.js
+
+
+main.js<--plan.js:Exports createPlan() function\n to define 3 rows of 6 randomly\n assigned crops each
+note over main.js: Stores value of function\n as variable "yearlyPlan"
+note over soybean.js: createSoybean function
+note over corn.js: createCorn function
+note over sunflower.js: createSunflower function
+note over asparagus.js: createAsparagus function
+note over wheat.js: createWheat function
+note over potato.js: createPotato function
+field.js<--soybean.js: accepts seeds for "addPlant" function
+field.js<--corn.js: accepts seeds for "addPlant" function
+field.js<--sunflower.js: accepts seeds for "addPlant" function
+field.js<--asparagus.js: accepts seeds for "addPlant" function
+field.js<--wheat.js: accepts seeds for "addPlant" function
+field.js<--potato.js: accepts seeds for "addPlant" function
+note over field.js: usePlants() returns array of plants and store in variable "availablePlants"
+loop
+main.js -> tractor.js: Invokes yearlyPlan(availablePlants) to iterate through plants to create a parent array and 3 child arrays of plants
+note over tractor.js: create plants when called from array
+end
+
+

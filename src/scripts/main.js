@@ -5,6 +5,7 @@ import { createPotato } from "./seeds/potato.js"
 import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
+import {addPlant, usePlants} from "./field.js"
 
 const yearlyPlan = createPlan()
 
@@ -28,4 +29,12 @@ console.log(wheatSeed)
 
 console.log("Welcome to the main module")
 
+//Create seed objects
+const asparagus = createAsparagus();
+const corn = createCorn();  // Returns an array of 2 corn objects
+const wheat = createWheat();
 
+// Add them to the field
+addPlant(asparagus);  // Adds 1 asparagus
+addPlant(corn);       // Adds 2 corn (handled by Array.isArray check)
+addPlant(wheat);      // Adds 1 wheat

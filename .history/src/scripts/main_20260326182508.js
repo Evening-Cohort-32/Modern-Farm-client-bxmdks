@@ -1,21 +1,29 @@
 import { createPlan } from "./plan.js"
-<<<<<<< Updated upstream
-=======
 import { createAsparagus } from "./seeds/asparagus.js"
 import { createCorn } from "./seeds/corn.js"
 import { createPotato } from "./seeds/potato.js"
 import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
-import { Catalog } from "./catalog.js"
 
->>>>>>> Stashed changes
 const yearlyPlan = createPlan()
 
+const asparagusSeed = createAsparagus()
+console.log(asparagusSeed)
 
+const cornSeed = createCorn()
+console.log(cornSeed)
 
+const potatoSeed = createPotato()
+console.log(potatoSeed)
 
+const soybeanSeed = createSoybean()
+console.log(soybeanSeed)
 
+const sunflowerSeed = createSunflower()
+console.log(sunflowerSeed)
 
-const fullHarvest = document.querySelector(".container")
+const wheatSeed = createWheat()
+console.log(wheatSeed)
+
 console.log("Welcome to the main module")

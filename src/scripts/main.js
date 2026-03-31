@@ -5,7 +5,7 @@ import { createPotato } from "./seeds/potato.js"
 import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
-import { Catalog } from "./catalog.js"
+import { catalog } from "./catalog.js"
 import {addPlant, usePlants} from "./field.js"
 import { harvestPlants } from "./harvester.js"
 
@@ -29,7 +29,6 @@ console.log(sunflowerSeed)
 const wheatSeed = createWheat()
 console.log(wheatSeed)
 
-const fullHarvest = document.querySelector(".container")
 console.log("Welcome to the main module")
 
 //Create seed objects
@@ -50,3 +49,6 @@ console.log(seeds)
 let plant = usePlants();
 let seeds = harvestPlants(plant);
 console.log(seeds)
+
+const fullHarvest = document.querySelector(".container")
+catalog(harvestedFood)

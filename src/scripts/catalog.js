@@ -1,5 +1,5 @@
 
-export function Catalog(harvestAllFood) {
+export function catalog(harvestAllFood) {
     const fullHarvest = document.querySelector(".container")
     let plantHTML = "" 
 

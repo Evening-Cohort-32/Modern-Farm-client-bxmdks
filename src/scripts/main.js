@@ -46,3 +46,7 @@ addPlant(wheat);      // Adds 1 wheat
 let plants = usePlants();
 let seeds = harvestPlants(plants);
 console.log(seeds)
+
+let plant = usePlants();
+let seeds = harvestPlants(plant);
+console.log(seeds)

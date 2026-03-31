@@ -50,5 +50,4 @@ let plant = usePlants();
 let seeds = harvestPlants(plant);
 console.log(seeds)
 
-const fullHarvest = document.querySelector(".container")
-catalog(harvestedFood)
+catalog(seeds);

@@ -6,6 +6,7 @@ import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import {addPlant, usePlants} from "./field.js"
+import { harvestPlants } from "./harvester.js"
 
 const yearlyPlan = createPlan()
 
@@ -38,3 +39,8 @@ const wheat = createWheat();
 addPlant(asparagus);  // Adds 1 asparagus
 addPlant(corn);       // Adds 2 corn (handled by Array.isArray check)
 addPlant(wheat);      // Adds 1 wheat
+
+//Get array of plants and harvest them
+let plants = usePlants();
+let seeds = harvestPlants(plants);
+console.log(seeds)
